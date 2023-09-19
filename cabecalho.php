@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -15,48 +14,6 @@
 
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand " href="/faturaMEI/index.php">FATURA MEI <span class="ml-3">|</span></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Cadastro
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/faturaMEI/visao/cadastroEmpresa.php">Empresa</a>
-            <a class="dropdown-item" href="/faturaMEI/visao/cadastroUsuario.php">Usuários</a>
-            <a class="dropdown-item" href="/faturaMEI/visao/classificacaoLancamento.php">Classificação</a>
-            
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Processos
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/faturaMEI/visao/Lancamentos.php">Fazer lançamentos</a>
-            <a class="dropdown-item" href="#">Contas a pagar</a>
-            <a class="dropdown-item" href="#">Contas a receber</a>
-            <a class="dropdown-item" href="#">Apuração mensal</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Relatorio
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Empresas cadastradas</a>
-            <a class="dropdown-item" href="#">Cliente/fornecedor cadastrados</a>
-            <a class="dropdown-item" href="#">Usuários cadastrados</a>
-            <a class="dropdown-item" href="#">Meus lançamentos</a>
-            
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <br>
+<h3 class="text-primary" style="text-align: center;">PESQUISA DE RESULTADOS CALCULADOS</h3>
+<hr>

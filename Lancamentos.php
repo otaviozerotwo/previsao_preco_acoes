@@ -2,37 +2,30 @@
 include_once("cabecalho.php");
 ?>
 
-<h2 class="text-primary" style="text-align: center;">CADASTRO LANÇAMENTOS</h2>
-<BR>
+<h4 class="text-primary" style="text-align: center;">CADASTRO LANÇAMENTOS</h4>
 <div style=" display: flex;justify-content: center;margin-top:2%;">
   <form action="" method="GET">
     <div class="form-row">
       <div class="form-group col-md-4">
-        <label for="valor">Data</label>
-        <input type="date" class="form-control" name="data" placeholder="00/00/0000" required>
 
-        <label for="tipoLancamento">Tipo</label>
+        <label for="tipoLancamento">Cod. ação:</label>
         <select name="tipo" class="form-control">
-          <option>Receita</option>
-          <option>Despesa</option>
+          <option>CMIG4</option>
+          <option>ITUB4</option>
+          <option>BBAS3</option>
         </select>
+        <label for="valor">Pregão</label>
+        <input type="number" class="form-control" name="valor" placeholder="0,00" required>
 
       </div>
       <div>
-        <label for="valor">Valor</label>
-        <input type="number" class="form-control" name="valor" placeholder="0,00" required>
-        <br><br>
+        <label for="tipoLancamento">Tipo</label>
+        <select name="tipo" class="form-control">
+          <option>Regração Linear</option>
+          <option>Polinomial</option>
+        </select>
         <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="meuCheckbox">
-        <label class="form-check-label" for="Consolidada">Consolidado</label>
-      </div>
-
-      </div>
-
-
-      <div class="form-group col-md-8">
-        <label for="descricao">Descrição</label>
-        <textarea class="form-control" name="descricao" placeholder="Descrição" required></textarea>
+        </div>
       </div>
     </div>
 
@@ -46,7 +39,7 @@ include_once("cabecalho.php");
   <hr>
 </fieldset>
 <div>
-  <h4 class="text-primary" style="text-align: center;">Relação de Lançamentos</h4>
+  <h4 class="text-primary" style="text-align: center;">RESULTADOS</h4>
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
@@ -79,18 +72,6 @@ include_once("cabecalho.php");
   </table>
 </div>
 </div>
-
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const table = document.querySelector('table');
-    const thElements = table.querySelectorAll('th');
-
-    thElements.forEach((th) => {
-      th.style.width = `${th.offsetWidth}px`;
-    });
-  });
-</script>
-
 <?php
 include_once("rodape.php");
 ?>
