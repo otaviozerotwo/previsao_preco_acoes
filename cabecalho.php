@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Fatura MEI</title>
+  <title>HISTORICO B3</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -15,5 +15,5 @@
 </head>
 <body>
   <br>
-<h3 class="text-primary" style="text-align: center;">PESQUISA DE RESULTADOS CALCULADOS</h3>
+<h3 class="text-primary" style="text-align: center;">APRENDIZADO SEMI-SUPERVISIONADO</h3>
 <hr>
