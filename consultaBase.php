@@ -28,7 +28,7 @@ include_once("cabecalho.php");
     <tbody>
       <?php
       include_once("ConnectionFactory_class.php"); //PDO
-
+      
 
       $conF = new ConnectionFactory();
       $con = $conF->getConnection();
@@ -37,7 +37,7 @@ include_once("cabecalho.php");
       if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         // Coleta os dados do formulário
         $id = $_GET['codigo'];
-       
+
         //$result = $con->query("SELECT * FROM cotacoes WHERE codigo = " . $id);
         $result = $con->query("SELECT * FROM cotacoes WHERE codigoAcao = '" . $id . "'");
 
