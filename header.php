@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -12,14 +12,17 @@
     </script>
     <!-- import css interno -->
     <link rel="stylesheet" href="style.css">
+    <!-- import javascript interno -->
+    <script src="jquery-3.6.4.js"></script>
+    <script src="main.js"></script>
 
     <title>HISTORICO B3</title>
 </head>
 
-<body>
-    <nav class="navbar bg-dark py-4"></nav>
+<body class="d-flex align-items-center bg-body-tertiary">
+    <header>
+        <nav class="navbar bg-primary p-4 fixed-top"></nav>
+    </header>
+    
 
-    <div class="container-fluid text-center">
-        <h1 class="my-4">Previsão Preços Ações</h1>
-        <h6 class="my-5">Aprendizado semi-supervisionado</h6>
-    </div>
+    
