@@ -25,7 +25,6 @@
             <?php
               include_once("ConnectionFactory_class.php"); //PDO
               
-
               $conF = new ConnectionFactory();
               $con = $conF->getConnection();
 
@@ -49,10 +48,6 @@
                   echo "<td>" . $linha["minimo"] . "</td>";
                   echo "<td>" . $linha["volume"] . "</td>";
                   echo "</tr>";
-                }
-                // Valida os dados do formulário
-                if (empty($id)) {
-                  echo 'O nome é obrigatório.';
                 }
               }
             ?>

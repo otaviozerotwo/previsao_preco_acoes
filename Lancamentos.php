@@ -1,5 +1,5 @@
 <?php
-  include_once("header.php");
+    include_once("header.php");
 ?>
 
 <h4 class="text-primary" style="text-align: center;">CADASTRO LANÇAMENTOS</h4>
@@ -101,7 +101,7 @@
 
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
       // Coleta os dados do formulário
-      // $id = $_GET['codigo'];
+      $id = $_GET['codigo'];
 
       //$result = $con->query("SELECT * FROM cotacoes WHERE codigo = " . $id);
       $result = $con->query("SELECT * FROM resultados");

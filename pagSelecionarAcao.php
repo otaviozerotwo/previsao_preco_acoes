@@ -5,7 +5,7 @@
 <main class="w-100 m-auto">
     <div class="container-fluid text-center">
         <h1 class="my-4">Previsão Preços Ações</h1>
-        <h6 class="my-5">Aprendizado semi-supervisionado</h6>
+        <h4 class="my-5">Aprendizado semi-supervisionado</h4>
     </div>
 
     <div class="container my-4">
