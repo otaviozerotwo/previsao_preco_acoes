@@ -1,4 +1,4 @@
-    <footer class="footer bg-primary py-4 fixed-bottom"></footer>
+    <footer class="footer bg-dark py-4"></footer>
 </body>
 
 </html>

@@ -19,10 +19,8 @@
     <title>HISTORICO B3</title>
 </head>
 
-<body class="d-flex align-items-center bg-body-tertiary">
-    <header>
-        <nav class="navbar bg-primary p-4 fixed-top"></nav>
-    </header>
+<body class="bg-body-tertiary">
+    <header class="navbar bg-dark p-4"></header>
     
 
     

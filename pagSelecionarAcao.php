@@ -4,8 +4,8 @@
 
 <main class="w-100 m-auto">
     <div class="container-fluid text-center">
-        <h1 id="titulo" class="mb-4">Previsão Preços Ações</h1>
-        <h6 id="sub-titulo" class="my-5">Aprendizado semi-supervisionado</h6>
+        <h1 class="my-4">Previsão Preços Ações</h1>
+        <h6 class="my-5">Aprendizado semi-supervisionado</h6>
     </div>
 
     <div class="container my-4">
@@ -60,7 +60,7 @@
                 </div>
 
                 <div class="form-group">
-                    <div class="col-md-6 offset-md-3">
+                    <div class="col-md-6 offset-md-3 botoes-modificada">
                         <button type="submit" id="btn-carregar-dados" class="btn btn-primary w-100 py-2 my-4">CARREGAR DADOS</button>
                     </div>
                 </div>
