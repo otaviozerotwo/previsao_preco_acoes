@@ -22,13 +22,13 @@
                 </select>
             </div>
             
-            <!-- <div class=" pb-4">
+            <div class=" pb-4">
                 <label class="h4" for="tipoLancamento">TIPO LISTAGEM</label>
-                <select name="tipo" class="form-select">
+                <select name="tipoListagem" class="form-select">
                     <option>Todos</option>
                     <option>Mais relevante</option>
                 </select>
-            </div> -->
+            </div>
         </div>
 
         <div class="form-group">

@@ -27,9 +27,15 @@
 
                         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                             $tipo = $_GET['tipo'];
+                            $tipoListagem = $_GET['tipoListagem'];
 
-                            $stmt = $con->prepare("SELECT * FROM resultados WHERE tipo = ?");
-                            $stmt->execute([$tipo]);
+                            if($tipoListagem == "Mais relevante"){
+                                $stmt = $con->prepare("SELECT * FROM resultados WHERE resultado = (SELECT MAX(resultado) FROM resultados)");
+                                $stmt->execute();
+                            }else{
+                                $stmt = $con->prepare("SELECT * FROM resultados ORDER BY resultado DESC");
+                                $stmt->execute();
+                            }
 
                             while ($linha = $stmt->fetch(PDO::FETCH_ASSOC)){
                                 echo "<tr>";
