@@ -43,8 +43,12 @@
                                         AND resultado = (SELECT MAX(resultado) FROM resultados)");
                             $stmt->execute([$codigo, $tipo]);
                         }else{
-                            $stmt = $con->prepare("SELECT * FROM resultados WHERE tipo = ? ORDER BY resultado DESC");
-                            $stmt->execute([$tipo]);
+                            $stmt = $con->prepare(
+                                "SELECT * FROM resultados 
+                                WHERE tipo = ? 
+                                      AND codigo = ?
+                                ORDER BY resultado DESC");
+                            $stmt->execute([$tipo, $codigo]);
                         }
 
                         while ($linha = $stmt->fetch(PDO::FETCH_ASSOC)){
