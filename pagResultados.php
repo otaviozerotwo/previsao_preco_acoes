@@ -26,9 +26,12 @@
 
 
                         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-                            $result = $con->query("SELECT * FROM resultados");
+                            $tipo = $_GET['tipo'];
 
-                            foreach ($result as $linha) {
+                            $stmt = $con->prepare("SELECT * FROM resultados WHERE tipo = ?");
+                            $stmt->execute([$tipo]);
+
+                            while ($linha = $stmt->fetch(PDO::FETCH_ASSOC)){
                                 echo "<tr>";
                                 echo "<td>" . $linha["tipo"] . "</td>";
                                 echo "<td>" . $linha["codigo"] . "</td>";
