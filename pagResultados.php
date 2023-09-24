@@ -24,17 +24,16 @@
                         $conF = new ConnectionFactory();
                         $con = $conF->getConnection();
 
-
                         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                             $tipo = $_GET['tipo'];
                             $tipoListagem = $_GET['tipoListagem'];
 
                             if($tipoListagem == "Mais relevante"){
-                                $stmt = $con->prepare("SELECT * FROM resultados WHERE resultado = (SELECT MAX(resultado) FROM resultados)");
-                                $stmt->execute();
+                                $stmt = $con->prepare("SELECT * FROM resultados WHERE tipo = ? and resultado = (SELECT MAX(resultado) FROM resultados)");
+                                $stmt->execute([$tipo]);
                             }else{
-                                $stmt = $con->prepare("SELECT * FROM resultados ORDER BY resultado DESC");
-                                $stmt->execute();
+                                $stmt = $con->prepare("SELECT * FROM resultados WHERE tipo = ? ORDER BY resultado DESC");
+                                $stmt->execute([$tipo]);
                             }
 
                             while ($linha = $stmt->fetch(PDO::FETCH_ASSOC)){
