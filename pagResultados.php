@@ -40,8 +40,11 @@
                                 "SELECT * FROM resultados 
                                 WHERE codigo = ?
                                         AND tipo = ? 
-                                        AND resultado = (SELECT MAX(resultado) FROM resultados)");
-                            $stmt->execute([$codigo, $tipo]);
+                                        AND resultado = (SELECT MAX(resultado) 
+                                                         FROM resultados
+                                                         WHERE codigo = ?
+                                                         AND tipo = ?)");
+                            $stmt->execute([$codigo, $tipo, $codigo, $tipo]);
                         }else{
                             $stmt = $con->prepare(
                                 "SELECT * FROM resultados 
