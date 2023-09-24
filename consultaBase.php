@@ -1,12 +1,24 @@
 <?php
+    session_start();
     include_once("header.php");
+
+    include_once("ConnectionFactory_class.php");
+                      
+    $conF = new ConnectionFactory();
+    $con = $conF->getConnection();
+
+    if ($_SERVER['REQUEST_METHOD'] == 'GET'){
+        $codigo = $_GET['codigo'];
+
+        $_SESSION['codigo'] = $codigo;
+    }
 ?>
 
 <main class="w-100 m-auto">
     <div class="container">
         <div class="col-md-10 offset-md-1">
             <h1 class="my-4  text-center">Dados Carregados</h1>
-            <h4 class="mt-5">HISTÓRICO DE COTAÇÕES</h4>
+            <h4 class="mt-5 mb-3">HISTÓRICO DE COTAÇÕES: <?php echo $codigo ?></h4>
             
             <table class="table table-striped table-bordered">
                 <thead>
@@ -23,27 +35,18 @@
                 
                 <tbody>
                     <?php
-                        include_once("ConnectionFactory_class.php"); //PDO
-                      
-                        $conF = new ConnectionFactory();
-                        $con = $conF->getConnection();
+                        $result = $con->query("SELECT * FROM cotacoes WHERE codigoAcao = '" . $codigo . "'");
 
-                        if ($_SERVER['REQUEST_METHOD'] == 'GET'){
-                            $codigo = $_GET['codigo'];
-
-                            $result = $con->query("SELECT * FROM cotacoes WHERE codigoAcao = '" . $codigo . "'");
-
-                            foreach ($result as $linha){
-                                echo "<tr>";
-                                echo "<td>" . date('d/m/Y', strtotime($linha["data"])) . "</td>";
-                                echo "<td>" . $linha["codigoAcao"] . "</td>";
-                                echo "<td>" . $linha["abertura"] . "</td>";
-                                echo "<td>" . $linha["fechamento"] . "</td>";
-                                echo "<td>" . $linha["maxima"] . "</td>";
-                                echo "<td>" . $linha["minimo"] . "</td>";
-                                echo "<td>" . $linha["volume"] . "</td>";
-                                echo "</tr>";
-                            }
+                        foreach ($result as $linha){
+                            echo "<tr>";
+                            echo "<td>" . date('d/m/Y', strtotime($linha["data"])) . "</td>";
+                            echo "<td>" . $linha["codigoAcao"] . "</td>";
+                            echo "<td>" . $linha["abertura"] . "</td>";
+                            echo "<td>" . $linha["fechamento"] . "</td>";
+                            echo "<td>" . $linha["maxima"] . "</td>";
+                            echo "<td>" . $linha["minimo"] . "</td>";
+                            echo "<td>" . $linha["volume"] . "</td>";
+                            echo "</tr>";
                         }
                     ?>
                 </tbody>

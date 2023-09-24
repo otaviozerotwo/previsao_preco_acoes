@@ -1,17 +1,20 @@
 <?php
+    session_start();
     include_once("header.php");
     include_once("ConnectionFactory_class.php"); //PDO
               
     $conF = new ConnectionFactory();
     $con = $conF->getConnection();
+
+    $codigo = $_SESSION['codigo'];
 ?>
 
 <main class="w-100 m-auto">
     <div class="container-fluid text-center">
         <h1 class="my-4">Regressão</h1>
-        <h4 class="my-5">Escolha o tipo de regressão</h4>
+        <h4 class="my-5">Escolha o tipo de regressão para:  <?php echo $codigo ?></h4>
     </div>
-
+    
     <form action="pagResultados.php" method="GET">
         <div class="col-md-6 offset-md-3">
             <div class="form-group pb-4">

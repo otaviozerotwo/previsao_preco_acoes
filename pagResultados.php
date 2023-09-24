@@ -1,11 +1,27 @@
 <?php
+    session_start();
     include_once("header.php");
+
+    include_once("ConnectionFactory_class.php");
+                    
+    $conF = new ConnectionFactory();
+    $con = $conF->getConnection();
+
+    $codigo = $_SESSION['codigo'];
+
+    if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+        $tipo = $_GET['tipo'];
+        $tipoListagem = $_GET['tipoListagem'];
+    }
 ?>
 
 <main class="w-100 m-auto">
     <div class="container">
         <div class="col-md-10 offset-md-1">
             <h1 class="my-4  text-center">Resultados</h1>
+            <h4>CÓDIGO: <?php echo $codigo ?></h4>
+            <h4>TIPO: <?php echo $tipo ?></h4>
+            <h4 class="mb-4">FILTRO: <?php echo $tipoListagem ?></h4>
 
             <table class="table table-striped table-bordered">
                 <thead>
@@ -19,31 +35,25 @@
 
                 <tbody>
                     <?php
-                        include_once("ConnectionFactory_class.php"); //PDO
-                    
-                        $conF = new ConnectionFactory();
-                        $con = $conF->getConnection();
+                        if($tipoListagem == "Mais relevante"){
+                            $stmt = $con->prepare(
+                                "SELECT * FROM resultados 
+                                WHERE codigo = ?
+                                        AND tipo = ? 
+                                        AND resultado = (SELECT MAX(resultado) FROM resultados)");
+                            $stmt->execute([$codigo, $tipo]);
+                        }else{
+                            $stmt = $con->prepare("SELECT * FROM resultados WHERE tipo = ? ORDER BY resultado DESC");
+                            $stmt->execute([$tipo]);
+                        }
 
-                        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-                            $tipo = $_GET['tipo'];
-                            $tipoListagem = $_GET['tipoListagem'];
-
-                            if($tipoListagem == "Mais relevante"){
-                                $stmt = $con->prepare("SELECT * FROM resultados WHERE tipo = ? and resultado = (SELECT MAX(resultado) FROM resultados)");
-                                $stmt->execute([$tipo]);
-                            }else{
-                                $stmt = $con->prepare("SELECT * FROM resultados WHERE tipo = ? ORDER BY resultado DESC");
-                                $stmt->execute([$tipo]);
-                            }
-
-                            while ($linha = $stmt->fetch(PDO::FETCH_ASSOC)){
-                                echo "<tr>";
-                                echo "<td>" . $linha["tipo"] . "</td>";
-                                echo "<td>" . $linha["codigo"] . "</td>";
-                                echo "<td>" . $linha["grauPolinomial"] . "</td>";
-                                echo "<td>" . $linha["resultado"] . "</td>";
-                                echo "</tr>";
-                            }
+                        while ($linha = $stmt->fetch(PDO::FETCH_ASSOC)){
+                            echo "<tr>";
+                            echo "<td>" . $linha["tipo"] . "</td>";
+                            echo "<td>" . $linha["codigo"] . "</td>";
+                            echo "<td>" . $linha["grauPolinomial"] . "</td>";
+                            echo "<td>" . $linha["resultado"] . "</td>";
+                            echo "</tr>";
                         }
                     ?>
                 </tbody>
