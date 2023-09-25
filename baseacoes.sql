@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23-Set-2023 às 21:54
+-- Tempo de geração: 25-Set-2023 às 18:43
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.0.25
 
@@ -2970,18 +2970,20 @@ CREATE TABLE `resultados` (
   `tipo` varchar(25) NOT NULL,
   `codigo` varchar(20) NOT NULL,
   `grauPolinomial` int(11) NOT NULL,
-  `resultado` float NOT NULL
+  `resultado` float NOT NULL,
+  `valor` double NOT NULL,
+  `valor_de_n` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `resultados`
 --
 
-INSERT INTO `resultados` (`id`, `tipo`, `codigo`, `grauPolinomial`, `resultado`) VALUES
-(1, 'Regreção Linear', 'CMIG4', 3, 0.48),
-(2, 'Polinomial', 'BBAS3', 5, 0.62),
-(3, 'Regreção Linear', 'CMIG4', 2, 0.75),
-(4, 'Polinomial', 'BBAS3', 6, 0.98);
+INSERT INTO `resultados` (`id`, `tipo`, `codigo`, `grauPolinomial`, `resultado`, `valor`, `valor_de_n`) VALUES
+(1, 'Regressão Linear', 'CMIG4', 3, 0.48, 0, 0),
+(2, 'Polinomial', 'BBAS3', 5, 0.62, 0, 0),
+(3, 'Regressão Linear', 'CMIG4', 2, 0.75, 0, 0),
+(4, 'Polinomial', 'BBAS3', 6, 0.98, 0, 0);
 
 --
 -- Índices para tabelas despejadas
