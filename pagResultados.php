@@ -29,7 +29,9 @@
                         <th>Tipo</th>
                         <th>Cod. Papel</th>
                         <th>Grau Polinomial</th>
-                        <th>Resultado</th>
+                        <th>Acurácia</th>
+                        <th>Valor</th>
+                        <th>Valor de N</th>
                     </tr>
                 </thead>
 
@@ -60,6 +62,8 @@
                             echo "<td>" . $linha["codigo"] . "</td>";
                             echo "<td>" . $linha["grauPolinomial"] . "</td>";
                             echo "<td>" . $linha["resultado"] . "</td>";
+                            echo "<td>" . $linha["valor"] . "</td>";
+                            echo "<td>" . $linha["valor_de_n"] . "</td>";
                             echo "</tr>";
                         }
                     ?>

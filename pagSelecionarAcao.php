@@ -20,7 +20,7 @@
                         <option style="color: green;">PETR3</option>
                         <option style="color: green;">BBDC4</option>
                         <option style="color: green;">B3SA3</option>
-                        <option style="color: green;">BRAS3</option>
+                        <option style="color: blue;">BRAS3</option>
                         <option style="color: green;">ELET3</option>
                         <optipn style="color: red;">BRAD4</option>
                         <option style="color: red;">LOCA3</option>
@@ -64,7 +64,7 @@
                 </div>
             </div>
         </form>
-    </div>
+
 </main>
 
 <?php
