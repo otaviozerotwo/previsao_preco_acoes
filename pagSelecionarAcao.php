@@ -1,5 +1,5 @@
 <?php
-include_once("header.php");
+    include_once("header.php");
 ?>
 
 <main class="w-100 m-auto">
@@ -68,5 +68,5 @@ include_once("header.php");
 </main>
 
 <?php
-include_once("footer.php");
+    include_once("footer.php");
 ?>
