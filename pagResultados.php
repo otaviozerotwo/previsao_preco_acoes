@@ -26,12 +26,12 @@
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
-                        <th>Tipo</th>
-                        <th>Cod. Papel</th>
-                        <th>Grau Polinomial</th>
-                        <th>Acurácia</th>
-                        <th>Valor</th>
-                        <th>Valor de N</th>
+                        <th>TIPO</th>
+                        <th>PAPEL</th>
+                        <th>GRAU POLINOMIAL</th>
+                        <th>ACURÁCIA</th>
+                        <th>VALOR</th>
+                        <th>VALOR DE N</th>
                     </tr>
                 </thead>
 
