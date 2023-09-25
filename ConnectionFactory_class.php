@@ -28,10 +28,7 @@
 				return $this->con;
 			}
 			catch(PDOException $ex){
-				
 				echo "Erro: " . $ex->getMessage();
-				
-				
 			}
 		}
 	
@@ -40,8 +37,5 @@
 				$this->con = null;
 			}
 		}
-	
 	}
-	
-
 ?>

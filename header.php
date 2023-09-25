@@ -20,7 +20,9 @@
 </head>
 
 <body class="bg-body-tertiary">
-    <header class="navbar bg-dark p-4"></header>
+    <header class="navbar bg-dark p-4">
+        <button id="btn-scroll-header" class="btn btn-info">Ir para o final</button>
+    </header>
     
 
     

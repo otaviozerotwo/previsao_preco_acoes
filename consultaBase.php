@@ -18,6 +18,7 @@
     <div class="container">
         <div class="col-md-10 offset-md-1">
             <h1 class="my-4  text-center">Dados Carregados</h1>
+
             <h4 class="mt-5 mb-3">HISTÓRICO DE COTAÇÕES: <?php echo $codigo ?></h4>
             
             <table class="table table-striped table-bordered">
