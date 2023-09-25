@@ -40,9 +40,9 @@
             </div>
 
             <div class="col-md-6 offset-md-3 botoes-modificada">
-                <button type="button" id="btn-proximo" class="btn btn-primary w-100 py-2 my-4">
-                    <a href="index.php">VOLTAR</a>
-                </button>
+                <a href= <?php echo "consultaBase.php?codigo=" . $codigo ?>>
+                    <button type="button" id="btn-proximo" class="btn btn-primary w-100 py-2 my-4">VOLTAR</button>
+                </a>
             </div>
         </div>
     </form>
