@@ -13,7 +13,7 @@ include_once("header.php");
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
                     <label for="codigo" class="h4">SELECIONE A AÇÃO</label>
-                    <select name="codigo" class="form-select">
+                    <select name="codigo" class="form-select" data-toggle="tooltip" data-placement="top" title="Valor em verde - Disponível | Valor em vermelho - Indisponível | Valor em azul - Próxima da atualização">
                         <option style="color: green;">VALE3</option>
                         <option style="color: green;">PETR4</optipn>
                         <option style="color: green;">ITUB4</option>
@@ -56,7 +56,7 @@ include_once("header.php");
                         <option style="color: red;">ALIA3</option>
                     </select>
                 </div>
-
+                
                 <div class="form-group">
                     <div class="col-md-6 offset-md-3 botoes-modificada">
                         <button type="submit" id="btn-carregar-dados" class="btn btn-primary w-100 py-2 my-4">CARREGAR DADOS</button>
