@@ -27,11 +27,11 @@
                 <thead>
                     <tr>
                         <th>TIPO</th>
-                        <th>PAPEL</th>
+                        <th>CÓDIGO PAPEL</th>
                         <th>GRAU POLINOMIAL</th>
                         <th>ACURÁCIA</th>
-                        <th>VALOR</th>
-                        <th>VALOR DE N</th>
+                        <th>PREÇO</th>
+                        <th>COTAÇÃO FUTURA</th>
                     </tr>
                 </thead>
 
@@ -72,9 +72,9 @@
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3 botoes-modificada">
-                    <button type="button" id="btn-proximo" class="btn btn-primary w-100 py-2 my-4">
-                        <a href="index.php">VOLTAR</a>
-                    </button>
+                    <a href="index.php">
+                        <button type="button" id="btn-proximo" class="btn btn-primary w-100 py-2 my-4">VOLTAR</button>
+                    </a>
                 </div>
             </div>
         </div>

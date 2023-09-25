@@ -25,7 +25,7 @@
                 <thead>
                     <tr>
                       <th>DATA DO PREGÃO</th>
-                      <th>CODIGO PAPEL</th>
+                      <th>CÓDIGO PAPEL</th>
                       <th>VR ABERTURA</th>
                       <th>VR FECHAMENTO</th>
                       <th>VR MAXIMO</th>
@@ -55,15 +55,15 @@
 
             <div class="form-group">
                 <div class="col-md-6 offset-md-3">
-                    <button type="button" id="btn-voltar" class="btn btn-primary w-100 py-2 my-4">
-                        <a href="pagSelecionarTipoRegressao.php">PRÓXIMO</a>
-                    </button>
+                    <a href="pagSelecionarTipoRegressao.php">
+                        <button type="button" id="btn-voltar" class="btn btn-primary w-100 py-2 my-4">PRÓXIMO</button>
+                    </a>
                 </div>
 
               <div class="col-md-6 offset-md-3 botoes-modificada">
-                  <button type="button" id="btn-proximo" class="btn btn-primary w-100 py-2 my-4">
-                      <a href="index.php">VOLTAR</a>
-                  </button>
+                    <a href="index.php">
+                        <button type="button" id="btn-proximo" class="btn btn-primary w-100 py-2 my-4">VOLTAR</button>
+                    </a>
               </div>
             </div>
         </div>
