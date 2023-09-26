@@ -8,10 +8,10 @@ include_once("header.php");
         <h4 class="my-5">Aprendizado semi-supervisionado</h4>
     </div>
 
-    <div class="container my-4">
+    <div class="container my-4 container-modificado">
         <form action="consultaBase.php" method="GET">
             <div class="form-group">
-                <div class="col-md-6 offset-md-3">
+                <div class="col-md-6 col-sx-6 col-xl-6 offset-md-3">
                     <label for="codigo" class="h4">SELECIONE A AÇÃO</label>
                     <select name="codigo" class="form-select">
                         <option style="color: green;">VALE3</option>
