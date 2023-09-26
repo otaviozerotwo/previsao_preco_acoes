@@ -29,7 +29,7 @@
                         <th>TIPO</th>
                         <th>CÓDIGO PAPEL</th>
                         <th>GRAU POLINOMIAL</th>
-                        <th>ACURÁCIA</th>
+                        <th>R-SQUARED</th>
                         <th>PREÇO</th>
                         <th>COTAÇÃO FUTURA</th>
                     </tr>
