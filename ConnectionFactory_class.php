@@ -4,7 +4,7 @@
 		public $dbType = "mysql";
 		public $host = "localhost";
 		public $user = "root";
-		public $senha = "vertrigo";
+		public $senha = "";
 		public $db = "baseacoes";
 		public $persistente = false;
 		
