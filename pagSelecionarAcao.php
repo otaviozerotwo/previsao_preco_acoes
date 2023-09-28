@@ -11,7 +11,7 @@ include_once("header.php");
     <div class="container my-4 container-modificado">
         <form action="consultaBase.php" method="GET">
             <div class="form-group">
-                <div class="col-md-6 col-sx-6 col-xl-6 offset-md-3">
+                <div class="col-xs-6 col-md-6 col-lg-6 offset-md-3">
                     <label for="codigo" class="h4">SELECIONE A AÇÃO</label>
                     <select name="codigo" class="form-select">
                         <option style="color: green;">VALE3</option>
